@@ -1,0 +1,134 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    background: linear-gradient(45deg, #010758, #490d61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 2rem 1rem;
+
+}
+.hero h1{
+    color: #fff;
+    width: 100%;
+    font-size: clamp(1.75rem, 7vw, 4rem);
+    line-height: 1.15;
+    text-transform: uppercase;
+    text-align: center;
+}
+.hero h1 span{
+    color: #ff2261;
+}
+textarea{
+    width: min(600px, 100%);
+    height: clamp(12rem, 32vh, 15.625rem);
+    padding: 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    resize: none;
+    background: #403d84;
+    color: #fff;
+    outline: 0;
+    margin-bottom: 2rem;
+}
+textarea::placeholder{
+    color: #ddd;
+    font-weight: 300;
+    font-size: 16px;
+}
+.row{
+   width: min(600px, 100%);
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+button{
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    outline: 0;
+    background: #ff2261;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+}
+button:hover{
+    background: #e80948;
+   
+}
+button:active{
+    transform: scale(0.95);
+    background: #a50b37;
+}
+button img{
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+select{
+    padding: 0 1.5rem;
+    border: 0;
+    outline: 0;
+    background: #403d84;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 35px;
+    height: 50px;
+    flex: 1;
+    appearance: none;
+    background-image: url("images/dropdown.png");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.65rem auto;
+}
+
+@media (max-width: 600px){
+    .hero{
+        justify-content: flex-start;
+        padding: 3rem 1rem 2rem;
+    }
+
+    .hero h1{
+        font-size: clamp(1.75rem, 9vw, 3rem);
+    }
+
+    textarea{
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .row{
+        gap: 0.75rem;
+    }
+
+    button{
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    select{
+        min-width: 0;
+        padding: 0 2rem 0 1rem;
+        font-size: 1rem;
+    }
+}
